@@ -24,17 +24,17 @@ while(flag != True):
      # PRINT-OUT
     print ("BTC/USD: " + price_usd + "\n" + "BTC/GBP: " + price_gpb)
 
-    if(alarmCount != maxAlarms):
-        alarmCount += 1 
-        try:
-            if(float(price_usd) > 25000):
-                mixer.init()
-                mixer.music.load(pathToSound) 
-                mixer.music.play()
-                while mixer.music.get_busy():
-                    time.sleep(1)
-        except(FileNotFoundError):
-            print("File not found, proceeding with no alarm...")
+    # if(alarmCount != maxAlarms):
+    #     alarmCount += 1 
+    #     try:
+    #         if(float(price_usd) > 25000):
+    #             mixer.init()
+    #             mixer.music.load(pathToSound) 
+    #             mixer.music.play()
+    #             while mixer.music.get_busy():
+    #                 time.sleep(1)
+    #     except(FileNotFoundError):
+    #         print("File not found, proceeding with no alarm...")
     time.sleep(4)  
 
 
